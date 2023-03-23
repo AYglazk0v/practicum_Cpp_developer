@@ -12,9 +12,7 @@ pair<bool, double> CalcMedian(vector<double> samples) {
   std::sort(samples.begin(), samples.end());
 
   if (samples.size() % 2 == 0) {
-    return {true, (0.0 + samples[samples.size() / 2 - 1] +
-                   samples[samples.size() / 2]) /
-                      2};
+    return {true, (0.0 + samples[samples.size() / 2 - 1] + samples[samples.size() / 2]) / 2};
   }
   return {true, samples[samples.size() / 2]};
 }
