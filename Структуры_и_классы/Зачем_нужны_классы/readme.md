@@ -70,7 +70,7 @@ vector&lt;Document&gt; FindTopDocuments(
 <p>Объединив объекты в <code>class</code>, защитите свой код от незапланированных изменений и сделаете его легко масштабируемым.</p>
 
 </details> 
-
+<details> 
 <summary>Задание:</summary>  
 <p>Посмотрите, как работает тип данных <code>class</code>.</p>
 
