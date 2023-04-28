@@ -100,3 +100,196 @@ const vector&lt;string&gt; new_dogs {
 
 <p>Примените <code>count_if</code> и захват по ссылке в лямбда-выражении.</p>
 </details> 
+
+<details>  
+<summary>Инструкция по эксплуатации:</summary>  
+
+<p>Вы познакомились с лямбда-функциями — синтаксическим сахаром С++. Теперь вам предстоит узнать, как получить от них максимум пользы.</p>
+
+<h3>Стремитесь делать лямбда-функции лаконичными</h3>
+
+<p>Основная цель лямбда-функций — сделать код проще для понимания. Например, по такому коду сразу видно, что выполняется сортировка по убыванию:</p>
+
+<pre><code class="language-cpp">sort(v.begin(), v.end(), [](int x, int y) { return x &gt; y; });
+</code></pre>
+
+<p>Сложная логика в лямбда-функциях потребует слишком много внимания. Такой код лучше вынести в отдельную функцию.</p>
+
+<p>Вот как выглядит громоздкая и непонятная лямбда-функция:</p>
+
+<pre><code class="language-cpp">struct Person {
+    int age;
+    string first_name;
+    string last_name;
+    bool graduated_from_university;
+    string city;
+};
+
+void FindPeopleLikeMe(const vector&lt;Person&gt;&amp; people) {
+    int people_like_me_count = count_if(people.begin(), people.end(),
+        [](const Person&amp; p) {
+            if (p.age &lt; 18 || p.age &gt; 40) {
+                return false;
+            }
+            if (p.last_name != &quot;Ivanov&quot;) {
+                return false;
+            }
+            if (p.first_name == &quot;Vasiliy&quot; || p.first_name == &quot;Petr&quot;) {
+                return false;
+            }
+            if (p.city == &quot;Moscow&quot; || p.city.find(&quot;Petersburg&quot;) != string::npos) {
+                return false;
+            }
+            return p.graduated_from_university;
+        });
+    // ...
+}
+</code></pre>
+
+<p>То же самое можно записать проще:</p>
+
+<pre><code class="language-cpp">struct Person {
+    int age;
+    string first_name;
+    string last_name;
+    bool graduated_from_university;
+    string city;
+};
+
+bool IsLikeMe(const Person&amp; p) {
+    if (p.age &lt; 18 || p.age &gt; 40) {
+        return false;
+    }
+    if (p.last_name != &quot;Ivanov&quot;) {
+        return false;
+    }
+    if (p.first_name == &quot;Vasiliy&quot; || p.first_name == &quot;Petr&quot;) {
+        return false;
+    }
+    if (p.city == &quot;Moscow&quot; || p.city.find(&quot;Petersburg&quot;) != string::npos) {
+        return false;
+    }
+    return p.graduated_from_university;
+}
+
+void FindPeopleLikeMe(const vector&lt;Person&gt;&amp; people) {
+    int people_like_me_count = count_if(people.begin(), people.end(), IsLikeMe);
+    // ...
+}
+</code></pre>
+
+<h3>Используйте лямбда-функции в алгоритмах</h3>
+
+<p>Лучшее место для лямбда-функций — предикаты в алгоритмах <code>sort</code>, <code>count_if</code> и в стандартных алгоритмах, о которых пойдёт речь позже.</p>
+
+<h3>Контролируйте захватываемые локальные переменные</h3>
+
+<p>Этот код считает, сколько людей посетило больше стран, чем грустный пользователь <code>me</code>:</p>
+
+<p>Допустим, пользователь решил посчитать, сколько людей посетило больше стран, чем он (или она):</p>
+
+<pre><code class="language-cpp">struct Person {
+    int age;
+    string first_name;
+    string last_name;
+    set&lt;string&gt; visited_countries;
+};
+
+int CountBetterTravellersThanMe(const Person&amp; me, const vector&lt;Person&gt;&amp; people) {
+    return count_if(people.begin(), people.end(), [](const Person&amp; p) {
+        return p.visited_countries.size() &gt; me.visited_countries.size();
+    });
+}
+</code></pre>
+
+<p>Код не скомпилируется, потому что переменная <code>me</code> не захвачена:</p>
+
+<pre><code>..\src\hw.cpp: In lambda function:
+..\src\hw.cpp:18:45: error: 'me' is not captured
+         return p.visited_countries.size() &gt; me.visited_countries.size();
+</code></pre>
+
+<p>Чтобы код скомпилировался, переменную <code>me</code> нужно захватить по значению:</p>
+
+<pre><code class="language-cpp">int CountBetterTravellersThanMe(const Person&amp; me,
+    const vector&lt;Person&gt;&amp; people) {
+    return count_if(people.begin(), people.end(), [me](const Person&amp; p) {
+        return p.visited_countries.size() &gt; me.visited_countries.size();
+    });
+}
+</code></pre>
+
+<p>Это самый простой, но неэффективный способ. Произойдёт глубокое копирование множества <code>visited_countries</code>. В общем случае такое копирование занимает много времени. Приемлемым решением будет захватить переменную <code>me</code> по ссылке:</p>
+
+<pre><code class="language-cpp">int CountBetterTravellersThanMe(const Person&amp; me,
+    const vector&lt;Person&gt;&amp; people) {
+    return count_if(people.begin(), people.end(), [&amp;me](const Person&amp; p) {
+        return p.visited_countries.size() &gt; me.visited_countries.size();
+    });
+}
+</code></pre>
+
+<p>Но есть способ лучше. От переменной <code>me</code> внутри лямбда-функции нужен только размер множества. Размер можно сохранить в целочисленную переменную и захватить в лямбде эту переменную, а не <code>me</code>:</p>
+
+<pre><code class="language-cpp">int CountBetterTravellersThanMe(const Person&amp; me,
+    const vector&lt;Person&gt;&amp; people) {
+    int my_visited_countries = me.visited_countries.size();
+    return count_if(people.begin(), people.end(),
+        [my_visited_countries](const Person&amp; p) {
+            return p.visited_countries.size() &gt; my_visited_countries;
+        });
+}
+</code></pre>
+
+<p>Так вы скопируете в лямбда-функцию всего одну целочисленную переменную.</p>
+
+<p>Вы прошли путь от очевидного решения до способа, который не только заставляет программу компилироваться, но и работает эффективно.</p>
+
+<h3>Захватывайте переменные простых типов по значению</h3>
+
+<p>Может возникнуть желание захватывать все переменные по ссылке, ведь это никогда не приводит к глубокому копированию:</p>
+
+<pre><code class="language-cpp">int main() {
+    int threshold;
+    cin &gt;&gt; threshold;
+
+    const vector&lt;int&gt; v = {1, 3, 5, 2, 6, 7, 10, 2, 3};
+    cout &lt;&lt; count_if(begin(v), end(v), [&amp;threshold](int x) { return x &gt; threshold; }) &lt;&lt; endl;
+//                                      ^ threshold захвачен по ссылке
+}
+</code></pre>
+
+<p>Делать так не стоит. Переменные, захваченные по ссылке, можно изменять изнутри лямбда-функции. Код ниже выводит <code>5</code>:</p>
+
+<pre><code class="language-cpp">int main() {
+    int x;
+    auto lambda = [&amp;x]() { x = 5; };
+    lambda();
+    cout &lt;&lt; x &lt;&lt; endl;
+}
+</code></pre>
+
+<p>У захвата переменной по ссылке две возможные цели:</p>
+
+<ul>
+<li>избежать долгого глубокого копирования;</li>
+<li>дать лямбда-функции возможность изменить локальную переменную. Это нужно довольно редко.</li>
+</ul>
+
+<p>Переменные простых типов — <code>int</code>, <code>double</code>, <code>char</code>, <code>bool</code> — копируются быстро. Захват таких переменных по ссылке может вызвать у читателя вашего кода ощущение, что вы собираетесь их изменять.</p>
+
+<p>Чтобы явно показать свои намерения, захватывайте переменные простых типов по значению, а переменные сложных типов — по ссылке.</p>
+
+<h1>Заключение</h1>
+
+<p>В этой теме вы узнали, как</p>
+
+<ul>
+<li>делать свой код удобным для чтения;</li>
+<li>получать от лямбда-функции максимум пользы;</li>
+<li>выбирать не самое очевидное, но самое эффективное решение задачи.</li>
+</ul>
+
+<p>Вы уже знаете очень многое. В продолжении курса вы не только расширите эти знания, но и откроете для себя новые возможности языка, усвоите важные детали и тонкости.</p>
+
+</details> 
