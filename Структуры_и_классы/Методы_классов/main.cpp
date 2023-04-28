@@ -128,4 +128,5 @@ int main() {
 	for (auto [document_id, relevance] : search_server.FindTopDocuments(query)) {
 		cout << "{ document_id = " << document_id << ", relevance = " << relevance << " }" << endl;
 	}
+	return 0;
 }
