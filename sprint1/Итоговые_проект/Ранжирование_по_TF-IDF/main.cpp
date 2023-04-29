@@ -62,7 +62,7 @@ public:
 				for (const string& word : tmp_vec) {
 						word_to_documents_freq_[word][document_id] += 1.0/tmp_vec.size();
 				}
-				count_docs_++;
+				++count_docs_;
 		}
 
 		vector<Document> FindTopDocuments(const string& query) const {
