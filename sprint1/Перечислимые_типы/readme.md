@@ -1,5 +1,5 @@
 <details>  
-<summary>Введение:</summary>
+<summary>Теория:</summary>
 
 # Перечислимые типы
 
