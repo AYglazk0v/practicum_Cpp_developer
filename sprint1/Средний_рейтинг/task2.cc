@@ -5,6 +5,7 @@
 #include <string>
 #include <cmath>
 #include <utility>
+#include <numeric>
 #include <vector>
 
 using namespace std;
@@ -16,17 +17,6 @@ string ReadLine() {
 		string s;
 		getline(cin, s);
 		return s;
-}
-
-int getAverageRaiting() {
-	int count_elem, average = 0;
-	std::cin >> count_elem;
-	for (int i = 0, tmp; i != count_elem; ++i) {
-		std::cin >> tmp;
-		average+=tmp;
-	}
-	ReadLine();
-	return (average/count_elem);
 }
 
 int ReadLineWithNumber() {
@@ -70,12 +60,12 @@ public:
 				}
 		}
 
-		void AddDocument(int document_id, const string& document, const int average) {
+		void AddDocument(int document_id, const string& document, const vector<int>& raitigs_review) {
 				auto tmp_vec = SplitIntoWordsNoStop(document);
 				for (const string& word : tmp_vec) {
 						word_to_documents_freq_[word][document_id] += 1.0/tmp_vec.size();
 				}
-				document_id_to_average_raiting_[document_id] = average;
+				document_id_to_average_raiting_[document_id] = ComputeAverageRating(raitigs_review);
 				
 		}
 
@@ -105,6 +95,12 @@ private:
     	set<string>						stop_words_;
 
 private:
+		static int ComputeAverageRating(const vector<int>& ratings){
+			if (ratings.empty())
+				return 0;
+			return (std::accumulate(ratings.begin(), ratings.end(), 0)/static_cast<int>(ratings.size()));
+		}
+
 		Query ParseQuery(std::vector<std::string> query) const {
 			Query ret_query;
 			for (auto& curr_w : query) {
@@ -163,8 +159,16 @@ SearchServer CreateSearchServer() {
 		const int document_count = ReadLineWithNumber();
 		for (int document_id = 0; document_id < document_count; ++document_id) {
                 std::string docs = ReadLine();
-				int average = getAverageRaiting();
-				search_server.AddDocument(document_id, docs, average);
+				
+				int count_review;
+				std::cin >> count_review;
+				std::vector<int> raiting(count_review);
+				for (auto& curr_elem : raiting) {
+					std::cin >> curr_elem;
+				}
+
+				search_server.AddDocument(document_id, docs, raiting);
+				ReadLine();
 		}
 		
 		return search_server;
