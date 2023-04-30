@@ -1,5 +1,5 @@
 <details>  
-<summary>Пары в компараторах:</summary>
+<summary>Кортежи. Начало:</summary>
 
 # Кортежи. Начало
 
