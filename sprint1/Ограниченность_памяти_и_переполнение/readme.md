@@ -1,5 +1,157 @@
 <details>  
-<summary>Введение:</summary>  
+<summary>Введение:</summary>
+<h1>Целочисленные типы</h1>
+
+<p>Во вводном курсе мы рассмотрели стандартный целочисленный тип <code>int</code>. Все числа, записанные в коде в виде цифр, по умолчанию имеют тип <code>int</code>, если они достаточно маленькие (см. таблицу ниже). Так, если написать <code>auto x = 1</code>, переменная <code>x</code> автоматически получит тип <code>int</code>. Но это не единственный целочисленный тип данных в С++.</p>
+
+<p>Целочисленные типы содержат положительные и отрицательные целые числа без дробной части. Они отличаются размером, занимаемой памятью и диапазоном значений. Есть знаковые (signed) и беззнаковые (unsigned) целочисленные типы. Знаковые хранят положительные и отрицательные числа и ноль, а беззнаковые — только натуральные числа, включая ноль.</p>
+
+<h2>Целочисленные типы С++</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Тип</strong></th>
+<th align="center"><strong>Количество байтов</strong></th>
+<th align="center"><strong>Количество бит</strong></th>
+<th align="center"><strong>Диапазон значений</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">int</td>
+<td align="center">4</td>
+<td align="center">32</td>
+<td align="center">от -2 147 483 648 до 2 147 483 647</td>
+</tr>
+<tr>
+<td align="center">unsigned int</td>
+<td align="center">4</td>
+<td align="center">32</td>
+<td align="center">от 0 до 4 294 967 295</td>
+</tr>
+<tr>
+<td align="center">int8_t</td>
+<td align="center">1</td>
+<td align="center">8</td>
+<td align="center">от -128 до 127</td>
+</tr>
+<tr>
+<td align="center">uint8_t</td>
+<td align="center">1</td>
+<td align="center">8</td>
+<td align="center">от 0 до 255</td>
+</tr>
+<tr>
+<td align="center">int16_t</td>
+<td align="center">2</td>
+<td align="center">16</td>
+<td align="center">от -32 768 до 32 767</td>
+</tr>
+<tr>
+<td align="center">uint16_t</td>
+<td align="center">2</td>
+<td align="center">16</td>
+<td align="center">от 0 до 65 535</td>
+</tr>
+<tr>
+<td align="center">int32_t</td>
+<td align="center">4</td>
+<td align="center">32</td>
+<td align="center">от -2 147 483 648 до 2 147 483 647</td>
+</tr>
+<tr>
+<td align="center">uint32_t</td>
+<td align="center">4</td>
+<td align="center">32</td>
+<td align="center">от 0 до 4 294 967 295</td>
+</tr>
+<tr>
+<td align="center">int64_t</td>
+<td align="center">8</td>
+<td align="center">64</td>
+<td align="center">от -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807</td>
+</tr>
+<tr>
+<td align="center">uint64_t</td>
+<td align="center">8</td>
+<td align="center">64</td>
+<td align="center">от 0 до 18 446 744 073 709 551 615</td>
+</tr>
+</tbody>
+</table>
+<p>Все типы с суффиксом <code>_t</code> из таблицы доступны при подключении библиотеки <code>cstdint</code>. Гарантируется, что они имеют указанный размер и диапазон значений.</p>
+
+<p>Тип <code>int</code> (и его беззнаковый товарищ <code>unsigned int</code>) стандартный и действительно, как правило, занимает четыре байта, но это может быть не так на процессорах старой или нестандартной архитектуры.</p>
+
+<p>В старом коде вы можете встретить и другие типы, размер которых чётко не определён. Но для основных архитектур всё-таки можем привести сравнение:</p>
+
+<ul>
+<li><code>char</code> — <code>int8_t</code> или <code>uint8_t</code>. Да-да, символ в C++ — это просто число с кодом этого символа.</li>
+<li><code>signed char</code> — <code>int8_t</code></li>
+<li><code>unsigned char</code> — <code>uint8_t</code></li>
+<li><code>short int</code> или <code>short</code> — <code>int16_t</code></li>
+<li><code>unsigned short int</code> или <code>unsigned short</code> — <code>uint16_t</code></li>
+<li><code>long int</code> или <code>long</code> — <code>int32_t</code></li>
+<li><code>unsigned long int</code> или <code>unsigned long</code> — <code>uint32_t</code></li>
+<li><code>long long int</code> или <code>long long</code> — <code>int64_t</code></li>
+<li><code>unsigned long long int</code> или <code>unsigned long long</code> — <code>uint64_t</code></li>
+</ul>
+
+<p>В новом коде принято использовать <code>int</code> или типы с суффиксом <code>_t</code> из <code>cstdint</code>.</p>
+
+<p>Разберёмся, как выбрать наиболее подходящий для решения задачи целочисленный тип данных.</p>
+
+<ul>
+<li>Если вам достаточно размера и диапазона значений стандартного типа <code>int</code> — используйте его.</li>
+<li>Если хотите хранить числа порядка триллиона, размер типа <code>int</code> не подойдёт — нужен <code>int64_t</code>.</li>
+<li>Если возникла необходимость экономить память на числах, применяйте типы меньшей размерности, такие как <code>int8_t</code>, <code>int16_t</code>.</li>
+<li>Если вы пишете программу, которая будет запускаться на неизвестной архитектуре, и нуждаетесь в 32-битном типе — выберите <code>int32_t</code>.</li>
+</ul>
+
+<p>Размеры всех типов данных заучивать необязательно: в С++ есть оператор <code>sizeof</code>, который возвращает размер в байтах. Например, мы забыли размер целочисленного типа <code>int16_t</code>. Применим <code>sizeof</code>:</p>
+
+<pre><code class="language-cpp">cout &lt;&lt; sizeof(int16_t) &lt;&lt; endl;
+</code></pre>
+
+<p>Программа напомнит, что размер <code>int16_t</code> составляет два байта.</p>
+
+<p>Можно применить <code>sizeof</code> и к выражению. Так мы узнаем, что размер вектора занимает восемь байт:</p>
+
+<pre><code class="language-cpp">cout &lt;&lt; sizeof(vector&lt;string&gt;{}.size()) &lt;&lt; endl;
+</code></pre>
+
+<p>Размер пустого вектора строк нулевой. Но зато каков этот ноль! Целых восемь байт.</p>
+
+<p><code>sizeof</code> удобен, когда вы уже мыслите в битах и на ходу строите логические цепочки: тип занимает восемь байт → это 64 бита → 2^64 больше 10^18 → число из 18 цифр поместится легко. Но можно и явно попросить компилятор вывести минимальное и максимальное значение любого целочисленного типа. Для этого подключим библиотеку <code>limits</code>:</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;limits&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; &quot;sizeof = &quot;s &lt;&lt; sizeof(int) &lt;&lt; endl;
+    cout &lt;&lt; &quot;min = &quot;s &lt;&lt; numeric_limits&lt;int&gt;::min() &lt;&lt; endl;
+    cout &lt;&lt; &quot;max = &quot;s &lt;&lt; numeric_limits&lt;int&gt;::max() &lt;&lt; endl;
+}
+</code></pre>
+
+<p>Запустим код и увидим всё про тип <code>int</code> на нашем процессоре:</p>
+
+<pre><code class="language-cpp">sizeof = 4
+min = -2147483648
+max = 2147483647
+</code></pre>
+
+<p>Вы узнали, какие целочисленные типы есть и какой объём памяти они занимают. Научились выяснять по целочисленному типу его размер, минимальное и максимальное значение. В C++ память для целочисленных типов ограничена. Далее разберёмся, что такое переполнение целочисленного типа.</p>
+
+<p>Проверьте себя. Выберите наиболее подходящий и экономный тип данных для целого числа в каждой ситуации. Исходите из того, что мы живём здесь и сейчас и не планируем рост указанных величин.</p>
+
+</details>  
+
+<details>  
+<summary>Теория:</summary>  
 <p>На вводном курсе вы изучили стандартный целочисленный тип <code>int</code>. В этой теме познакомитесь с другими целочисленными типами С++, узнаете их размеры и правила преобразования друг к другу. Научитесь избегать переполнения типов. И убедитесь, что компилятор — ваш заклятый друг.</p>
 
 <p>Вы уже знаете основы С++ и умеете писать на нём довольно сложные программы. Выполните задания и вспомните всё.</p>
