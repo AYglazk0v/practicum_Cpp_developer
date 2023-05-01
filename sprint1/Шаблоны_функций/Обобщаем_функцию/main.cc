@@ -16,7 +16,17 @@ map<Term, int> ComputeTermFreqs(const vector<Term>& terms) {
 
 template <typename Term>
 pair<Term, int> FindMaxFreqAnimal(const vector<pair<Term, int>>& animals) {
-    return *std::max_element(animals.begin(), animals.end(), [](const std::pair<Term, int>& lhs, const std::pair<Term, int>& rhs) {return lhs.second > rhs.second;});
+    auto ret_m = ComputeTermFreqs(animals);
+
+    std::pair<Term,int> ret_pair;
+    int max = 0;
+    for (auto& current_elem : ret_m) {
+        if (current_elem.second > max) {
+            ret_pair = current_elem.first;
+            max = current_elem.second;
+        }
+    }
+    return ret_pair;
 }
 
 int main() {
@@ -25,20 +35,10 @@ int main() {
         {"Belka"s, 6},
         {"Murka"s, 7},
         {"Murka"s, 5}, 
+        {"Murka"s, 5}, 
         {"Belka"s, 6},
     };
     const pair<string, int> max_freq_animal = FindMaxFreqAnimal(animals);
     cout << max_freq_animal.first << " "s
          << max_freq_animal.second << endl;
-    
-    const vector<pair<int, int>> leg_count = {
-        {4, 5},
-        {4, 6},
-        {2, 7},
-        {4, 5}, 
-        {1, 6},
-    };
-    const pair<int, int> max_legs = FindMaxFreqAnimal(leg_count);
-    cout << max_legs.first << " "s
-         << max_legs.second << endl;
 }
