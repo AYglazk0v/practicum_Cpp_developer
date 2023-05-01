@@ -16,14 +16,12 @@ map<Term, int> ComputeTermFreqs(const vector<Term>& terms) {
 
 template <typename Term>
 pair<Term, int> FindMaxFreqAnimal(const vector<pair<Term, int>>& animals) {
-    auto ret_m = ComputeTermFreqs(animals);
-
     std::pair<Term,int> ret_pair;
-    int max = 0;
-    for (auto& current_elem : ret_m) {
-        if (current_elem.second > max) {
-            ret_pair = current_elem.first;
-            max = current_elem.second;
+    int max_freq = 0;
+    for (const auto& [animal, freq] : ComputeTermFreqs(animals)) {
+        if (freq > max_freq) {
+            ret_pair = animal;
+            max_freq = freq;
         }
     }
     return ret_pair;
