@@ -389,6 +389,7 @@ void TestSortRelevance() {
     }
 }
 
+//Проверка, что выводится MAX DOCUMENT COUNT
 void TestCountReturnTopDocument(){
     SearchServer server;
 
@@ -401,6 +402,18 @@ void TestCountReturnTopDocument(){
 
     assert(MAX_RESULT_DOCUMENT_COUNT == 5);
     assert(server.FindTopDocuments("a"s, DocumentStatus::ACTUAL).size() == 5);
+}
+
+void TestFullOutputFindTopDocument() {
+    SearchServer server;
+
+    server.SetStopWords("и в на"s);
+    server.AddDocument(2, "ухоженный пёс выразительные глаза"s, DocumentStatus::ACTUAL, {5, -12, 2, 1});
+    auto doc = server.FindTopDocuments("ухоженный кот"s);
+
+    assert(doc[0].id == 2);
+    assert(doc[0].relevance - 0.274653 < 1e-6);
+    assert(doc[0].rating == -1);
 }
 
 //Проверка, что выводится средний рейтинг
