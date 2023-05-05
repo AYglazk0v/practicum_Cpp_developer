@@ -31,7 +31,7 @@ int main() {
 
 
 <details>  
-<summary>Ответы:</summary>
+<summary>Задание:</summary>
 
 ## Задание
 
