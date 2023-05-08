@@ -1,5 +1,6 @@
 <details>
 <summary>Введение:</summary>
+    
 # Введение
 
 Вы уже сталкивались с алгоритмами поиска и методами контейнеров  `find`  и  `count`. Алгоритм  [`find`](https://ru.cppreference.com/w/cpp/algorithm/find)  и его родственники  `find_if`  и  `find_if_not`  ищут элемент в контейнере. Алгоритмы  [`count`](https://ru.cppreference.com/w/cpp/algorithm/count)  и  `count_if`  возвращают количество элементов, равных переданному параметру, и количество элементов, для которых выполняется некое условие.
