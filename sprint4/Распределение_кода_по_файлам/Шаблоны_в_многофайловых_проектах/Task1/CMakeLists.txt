@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.20)
 project(SearchServer)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Добавьте пути к исходным файлам вашего проекта
 set(SOURCES
         document.cpp
         document.h
@@ -19,6 +19,5 @@ set(SOURCES
         string_processing.h
 )
 
-# Создайте исполняемый файл
 add_executable(${PROJECT_NAME} ${SOURCES})
 
