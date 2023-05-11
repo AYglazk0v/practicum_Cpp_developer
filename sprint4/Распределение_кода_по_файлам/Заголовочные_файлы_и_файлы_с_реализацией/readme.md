@@ -305,7 +305,7 @@ double CalcSquare(double width, double height) {
 </details>
 
 <details>
-<summary>Задание:</summary>
+<summary>Задание 1:</summary>
 
 ## Задание 1
 
@@ -341,7 +341,7 @@ double Wall::GetHeight() const {
 </details>
 
 <details>
-<summary>Задание:</summary>
+<summary>Задание 2:</summary>
 
 ## Задание 2
 
