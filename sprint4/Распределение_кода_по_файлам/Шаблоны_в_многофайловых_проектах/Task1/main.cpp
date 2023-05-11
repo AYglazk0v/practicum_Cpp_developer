@@ -1,22 +1,24 @@
-#include "accountant.h"
-#include "ceiling.h"
-#include "roof.h"
-
-#include <iostream>
-
-using namespace std;
+#include "search_server.h"
+#include "request_queue.h"
 
 int main() {
-    Accountant ray;
-    Wall wall(3.5, 2.45);
-    Roof roof(5, 7);
-    Ceiling ceiling(5, 7);
+    using namespace std::string_literals;
 
-    cout << "Требуется кирпичей: "s
-         << ray.CalcBricksNeeded<Wall>(wall) + ray.CalcBricksNeeded<Roof>(roof) + ray.CalcBricksNeeded<Ceiling>(ceiling)
-         << endl;
+    SearchServer search_server("and in at"s);
+    RequestQueue request_queue(search_server);
 
-    cout << "Требуется краски: "s
-         << ray.CalcPaintNeeded<Wall>(wall) + ray.CalcPaintNeeded<Roof>(roof) + ray.CalcPaintNeeded<Ceiling>(ceiling)
-         << endl;
+    search_server.AddDocument(1, "curly cat curly tail"s, DocumentStatus::ACTUAL, {7, 2, 7});
+    search_server.AddDocument(2, "curly dog and fancy collar"s, DocumentStatus::ACTUAL, {1, 2, 3});
+    search_server.AddDocument(3, "big cat fancy collar "s, DocumentStatus::ACTUAL, {1, 2, 8});
+    search_server.AddDocument(4, "big dog sparrow Eugene"s, DocumentStatus::ACTUAL, {1, 3, 2});
+    search_server.AddDocument(5, "big dog sparrow Vasiliy"s, DocumentStatus::ACTUAL, {1, 1, 1});
+
+    for (int i = 0; i < 1439; ++i) {
+        request_queue.AddFindRequest("empty request"s);
+    }
+    request_queue.AddFindRequest("curly dog"s);
+    request_queue.AddFindRequest("big collar"s);
+    request_queue.AddFindRequest("sparrow"s);
+    std::cout << "Total empty requests: "s << request_queue.GetNoResultRequests() << std::endl;
+    return 0;
 }
