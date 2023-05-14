@@ -208,47 +208,12 @@ const int* const p4 = &data;
 
 ```
 
-----------
-
--   `const string *`
-    
--   `vector<string> * const`
-    
--   `const vector<string*>`
-    
--   `map<int, const string> * const`
-    
--   `string const *`
-    
--   `char const * const`
-    
-
 ### Указатели и константность — итоги
 
 Указатели на константу нужны, чтобы хранить адрес константного объекта и ограничивать доступ к неконстантным объектам. Сам указатель также может быть константным — в этом случае адрес, хранящийся в нём, нельзя менять после инициализации.
 
 </details>
 
-<details>
-<summary>Ответы:</summary>
-
-# Ответы на задания
-
-----------
-
--   `const string *`
-
--   `vector<string> * const`
-
--   `const vector<string*>`
-
--   `map<int, const string> * const`
-
--   `string const *`
-
--   `char const * const`
-
-</details>
 
 <details>
 <summary>Задание:</summary>
