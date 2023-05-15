@@ -21,11 +21,11 @@ public:
     SingleLinkedList() = default;
 
     SingleLinkedList(std::initializer_list<Type> values) {
-        CopyElems(values);
+        CopyElems_(values);
     }
 
     SingleLinkedList(const SingleLinkedList& other) {
-        CopyElems(other);
+        CopyElems_(other);
     }
 
     SingleLinkedList& operator=(const SingleLinkedList& rhs) {
@@ -225,7 +225,7 @@ public:
 
 private:
     template<typename T>
-    void CopyElems(const T& elems) {
+    void CopyElems_(const T& elems) {
         assert(size_ == 0 && head_.next_node == nullptr);
         SingleLinkedList<Type> tmp;
         Node* last_elem = &tmp.head_;
