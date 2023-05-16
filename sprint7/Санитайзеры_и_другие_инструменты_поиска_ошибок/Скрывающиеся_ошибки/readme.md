@@ -192,7 +192,7 @@ Thread 1 hit Breakpoint 1, 0x000000006144d595 in msvcrt!abort ()
 </details>
 
 <details>
-<summary>Задание:</summary>
+<summary>Ответы:</summary>
 
 # Ответы на задания
 
