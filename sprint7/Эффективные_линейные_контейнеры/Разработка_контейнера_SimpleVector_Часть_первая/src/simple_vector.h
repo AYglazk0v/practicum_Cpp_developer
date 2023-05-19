@@ -7,6 +7,17 @@
 
 #include "array_ptr.h"
 
+class ReserveProxyObj {
+public:
+	ReserveProxyObj(size_t capacity) : capacity_(capacity) {   
+    }
+
+    size_t GetCapacity() const { return capacity_; }
+
+private:
+	size_t capacity_;
+};
+
 template <typename Type>
 class SimpleVector {
 public:
@@ -38,6 +49,10 @@ public:
     SimpleVector(std::initializer_list<Type> init) : size_(init.size()), capacity_(size_), array_(size_) {
         std::copy(init.begin(), init.end(), begin());
     }
+    
+    SimpleVector(const ReserveProxyObj& obj) {
+		Reserve(obj.GetCapacity());
+	}
 
     SimpleVector& operator=(const SimpleVector& rhs) {
         if (&rhs != this) {
@@ -168,6 +183,15 @@ public:
             capacity_ = new_size;
         }
     }
+    
+    void Reserve(size_t new_capacity){
+        if (new_capacity > capacity_) {
+            ArrayPtr<Type> tmp{new_capacity};
+            std::copy(begin(), end(), tmp.Get());
+            array_.swap(tmp);
+            capacity_ = new_capacity;
+        }
+    }
 
     Iterator begin() noexcept               { return array_.Get(); }
     Iterator end() noexcept                 { return IsEmpty() ? begin() : array_.Get() + size_; }
@@ -175,6 +199,10 @@ public:
     ConstIterator end() const noexcept      { return IsEmpty() ? begin() : array_.Get() + size_; }
     ConstIterator cbegin() const noexcept   { return array_.Get(); }
     ConstIterator cend() const noexcept     { return IsEmpty() ? begin() : array_.Get() + size_; }
+};
+
+ReserveProxyObj Reserve(size_t capacity_to_reserve) {
+    return ReserveProxyObj(capacity_to_reserve);
 };
 
 template <typename Type>
