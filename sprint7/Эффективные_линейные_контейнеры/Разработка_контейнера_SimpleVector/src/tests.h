@@ -2,6 +2,7 @@
 #include <cassert>
 #include <stdexcept>
 
+#include "simple_vector.h"
 
 inline void Test1() {
     // Инициализация конструктором по умолчанию
