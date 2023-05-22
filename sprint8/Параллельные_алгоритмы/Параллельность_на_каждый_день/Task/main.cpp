@@ -10,7 +10,6 @@
 using namespace std;
 
 string GenerateQuery(mt19937& generator, int max_length, int space_rate) {
-    int count_space = 0;
     const int length = uniform_int_distribution(1, max_length)(generator);
     string query(length, ' ');
     for (char& c : query) {
@@ -18,7 +17,6 @@ string GenerateQuery(mt19937& generator, int max_length, int space_rate) {
         if (rnd > 0) {
             c = 'a' + (rnd - 1);
         }
-        count_space += c == ' '? 1 : 0;
     }
     return query;
 }
