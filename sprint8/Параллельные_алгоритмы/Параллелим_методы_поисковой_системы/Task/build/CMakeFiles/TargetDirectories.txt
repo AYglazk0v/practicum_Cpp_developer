@@ -1,0 +1,3 @@
+/Users/gtaggana/Task/build/CMakeFiles/search_server.dir
+/Users/gtaggana/Task/build/CMakeFiles/edit_cache.dir
+/Users/gtaggana/Task/build/CMakeFiles/rebuild_cache.dir
