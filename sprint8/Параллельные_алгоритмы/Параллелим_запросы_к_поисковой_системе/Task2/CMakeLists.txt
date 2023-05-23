@@ -27,4 +27,4 @@ add_executable(search_server
 )
 target_compile_options(search_server PRIVATE -O2)
 target_compile_options(search_server PRIVATE -DPARALLEL)
-target_link_libraries(search_server PRIVATE -lstdc++ -lpthread -std=c++20)
+target_link_libraries(search_server PRIVATE -lstdc++ -lpthread -ltbb -pthread -std=c++20)
