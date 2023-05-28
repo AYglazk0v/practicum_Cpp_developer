@@ -1,6 +1,7 @@
 #include <functional>
 #include <future>
 #include <iostream>
+#include <iterator>
 #include <map>
 #include <set>
 #include <sstream>
@@ -26,19 +27,20 @@ Stats ExploreKeyWords(const KeyWords& key_words, istream& input) {
     }
 
     std::string str;
-    input >> str;
+    std::getline(input, str);
     auto worker = std::async([&key_words, &input]{return ExploreKeyWords(key_words, input);});
 
     Stats stats{};
-    for (auto it = str.begin(), it0 = str.begin(), ite = str.end(); it != ite;) {
-        for (; it0 != ite && isprint(*it0); ++it0);
-        auto it_found_key = key_words.find({it, it0});
-        if (it_found_key != key_words.end()) {
-            ++stats.word_frequences[*it_found_key];
+    auto pos_alpha = str.find_first_not_of(' ');
+    auto pos_delim = str.find_first_of(' ', pos_alpha);
+    while (pos_alpha != str.npos || pos_delim != str.npos) {
+        std::string tmp = str.substr(pos_alpha, pos_delim - pos_alpha);
+        if (key_words.count(tmp)) {
+            ++stats.word_frequences[tmp];
         }
-        it = it0;
+        pos_alpha = str.find_first_not_of(' ', pos_delim);
+        pos_delim = str.find_first_of(' ', pos_alpha);
     }
-
     stats += worker.get();
     return stats;
 }
