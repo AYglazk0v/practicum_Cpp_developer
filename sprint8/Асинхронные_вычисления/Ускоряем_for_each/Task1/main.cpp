@@ -55,20 +55,22 @@ void Test(string_view mark, Container keys, Function function) {
 template <typename ForwardRange, typename Function>
 void ForEach(ForwardRange& range, Function function) {
     auto count_next = range.size() / count_threads;
+    count_next = count_next > 0 ? count_next : 1;
+
     auto it_s = range.begin();
-    auto it_e = std::next(range.begin(), count_next);
+    auto it_e = range.begin();
     vector<future<void>> futures;
-    for (int i = 0; i != count_threads; ++i) {
-        futures.push_back(std::async([&it_s, &it_e, &function]{
-            for_each(it_s, it_e, function);
-        }));
-        it_s = it_e;
+    for (int i = 0; it_e != range.end() ; ++i) {
         if (i == count_threads - 1) {
             it_e = range.end();
         }
         else {
             it_e = next(it_s, count_next);
         }
+        futures.push_back(std::async([it_s, it_e, function]{
+            for_each(it_s, it_e, function);
+        }));
+        it_s = it_e;
     }
 }
 
