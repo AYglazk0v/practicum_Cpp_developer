@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1759" height="1077.7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+  <polyline transform="translate(55 62.452)" points="983.33 419.56 925 456.52 866.67 493.48 808.33 530.44 866.67 493.48 925 456.52 983.33 419.56" stroke="#f00"/>
+  <polyline transform="translate(55 62.452)" points="50 197.83 108.33 234.78 166.67 271.74 225 308.7 283.33 345.65 341.67 382.61 400 419.56 691.67 456.52 750 493.48 808.33 530.44 925 567.39 983.33 604.35 1041.7 641.3 1100 678.26 1158.3 715.22 1100 678.26 1041.7 641.3 983.33 604.35 925 567.39 808.33 530.44 750 493.48 691.67 456.52 400 419.56 341.67 382.61 283.33 345.65 225 308.7 166.67 271.74 108.33 234.78 50 197.83" stroke="#008000"/>
+  <polyline transform="translate(55 62.452)" points="691.67 456.52 633.33 419.56 575 382.61 516.67 345.65 458.33 308.7 400 271.74 341.67 234.78 283.33 197.83 225 160.87 166.67 123.91 108.33 86.956 50 50 108.33 86.956 166.67 123.91 225 160.87 283.33 197.83 341.67 234.78 400 271.74 458.33 308.7 516.67 345.65 575 382.61 633.33 419.56 691.67 456.52" stroke="#00f"/>
+  <polyline transform="translate(55 62.452)" points="925 567.39 983.33 530.44 1041.7 493.48 983.33 530.44 925 567.39" stroke="#a52a2a"/>
+  <polyline transform="translate(55 62.452)" points="1216.7 900 1158.3 715.22 1216.7 752.17 1275 789.13 1333.3 826.09 1391.7 863.04 1450 900 1391.7 863.04 1333.3 826.09 1275 789.13 1216.7 752.17 1158.3 715.22 1216.7 900" stroke="#ffa500"/>
+ </g>
+ <g font-family="Verdana" font-size="18px" font-weight="bold">
+  <text x="1038.333" y="482.01666" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">13</text>
+  <text x="1038.333" y="482.01666" dx="7" dy="15" fill="#ff0000">13</text>
+  <text x="863.33301" y="592.88666" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">13</text>
+  <text x="863.33301" y="592.88666" dx="7" dy="15" fill="#ff0000">13</text>
+  <text x="105" y="260.27765" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">23</text>
+  <text x="105" y="260.27765" dx="7" dy="15" fill="#008000">23</text>
+  <text x="1213.33" y="777.66864" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">23</text>
+  <text x="1213.33" y="777.66864" dx="7" dy="15" fill="#008000">23</text>
+  <text x="746.66699" y="518.97363" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">36</text>
+  <text x="746.66699" y="518.97363" dx="7" dy="15" fill="#0000ff">36</text>
+  <text x="105" y="112.45166" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">36</text>
+  <text x="105" y="112.45166" dx="7" dy="15" fill="#0000ff">36</text>
+  <text x="980" y="629.84265" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">44к</text>
+  <text x="980" y="629.84265" dx="7" dy="15" fill="#a52a2a">44к</text>
+  <text x="1096.6699" y="555.92969" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">44к</text>
+  <text x="1096.6699" y="555.92969" dx="7" dy="15" fill="#a52a2a">44к</text>
+  <text x="1271.67" y="962.45166" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">90</text>
+  <text x="1271.67" y="962.45166" dx="7" dy="15" fill="#ffa500">90</text>
+  <text x="1505" y="962.45166" dx="7" dy="15" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">90</text>
+  <text x="1505" y="962.45166" dx="7" dy="15" fill="#ffa500">90</text>
+ </g>
+ <g fill="#fff">
+  <circle cx="630" cy="445.06" r="3"/>
+  <circle cx="280" cy="223.32" r="3"/>
+  <circle cx="396.67" cy="297.23" r="3"/>
+  <circle cx="1271.7" cy="962.45" r="3"/>
+  <circle cx="513.33" cy="371.15" r="3"/>
+  <circle cx="1446.7" cy="925.49" r="3"/>
+  <circle cx="1505" cy="962.45" r="3"/>
+  <circle cx="746.67" cy="518.97" r="3"/>
+  <circle cx="338.33" cy="260.28" r="3"/>
+  <circle cx="805" cy="555.93" r="3"/>
+  <circle cx="571.67" cy="408.1" r="3"/>
+  <circle cx="221.67" cy="334.19" r="3"/>
+  <circle cx="980" cy="629.84" r="3"/>
+  <circle cx="455" cy="482.02" r="3"/>
+  <circle cx="980" cy="518.97" r="3"/>
+  <circle cx="921.67" cy="555.93" r="3"/>
+  <circle cx="1388.3" cy="888.54" r="3"/>
+  <circle cx="1155" cy="740.71" r="3"/>
+  <circle cx="1330" cy="851.58" r="3"/>
+  <circle cx="280" cy="371.15" r="3"/>
+  <circle cx="338.33" cy="408.1" r="3"/>
+  <circle cx="105" cy="260.28" r="3"/>
+  <circle cx="1271.7" cy="814.63" r="3"/>
+  <circle cx="163.33" cy="297.23" r="3"/>
+  <circle cx="688.33" cy="482.02" r="3"/>
+  <circle cx="396.67" cy="445.06" r="3"/>
+  <circle cx="1096.7" cy="703.76" r="3"/>
+  <circle cx="863.33" cy="592.89" r="3"/>
+  <circle cx="1213.3" cy="777.67" r="3"/>
+  <circle cx="1096.7" cy="555.93" r="3"/>
+  <circle cx="1038.3" cy="482.02" r="3"/>
+  <circle cx="1038.3" cy="592.89" r="3"/>
+  <circle cx="455" cy="334.19" r="3"/>
+  <circle cx="105" cy="112.45" r="3"/>
+  <circle cx="221.67" cy="186.36" r="3"/>
+  <circle cx="163.33" cy="149.41" r="3"/>
+  <circle cx="1038.3" cy="666.8" r="3"/>
+ </g>
+ <g font-family="Verdana" font-size="13px">
+  <text x="630" y="445.06067" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Автовокзал</text>
+  <text x="630" y="445.06067" dx="7" dy="-3" fill="#000000">Автовокзал</text>
+  <text x="280" y="223.32166" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Деревообр. комбинат</text>
+  <text x="280" y="223.32166" dx="7" dy="-3" fill="#000000">Деревообр. комбинат</text>
+  <text x="396.66699" y="297.23468" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Кинотеатр Юбилейный</text>
+  <text x="396.66699" y="297.23468" dx="7" dy="-3" fill="#000000">Кинотеатр Юбилейный</text>
+  <text x="1271.67" y="962.45166" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Краево-Греческая улица</text>
+  <text x="1271.67" y="962.45166" dx="7" dy="-3" fill="#000000">Краево-Греческая улица</text>
+  <text x="513.33301" y="371.14767" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Магазин Быт</text>
+  <text x="513.33301" y="371.14767" dx="7" dy="-3" fill="#000000">Магазин Быт</text>
+  <text x="1446.67" y="925.49469" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Мацеста</text>
+  <text x="1446.67" y="925.49469" dx="7" dy="-3" fill="#000000">Мацеста</text>
+  <text x="1505" y="962.45166" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Мацестинская долина</text>
+  <text x="1505" y="962.45166" dx="7" dy="-3" fill="#000000">Мацестинская долина</text>
+  <text x="746.66699" y="518.97363" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Морской вокзал</text>
+  <text x="746.66699" y="518.97363" dx="7" dy="-3" fill="#000000">Морской вокзал</text>
+  <text x="338.33301" y="260.27765" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Новая Заря</text>
+  <text x="338.33301" y="260.27765" dx="7" dy="-3" fill="#000000">Новая Заря</text>
+  <text x="805" y="555.92969" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Органный зал</text>
+  <text x="805" y="555.92969" dx="7" dy="-3" fill="#000000">Органный зал</text>
+  <text x="571.66699" y="408.10367" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Отель Звёздный</text>
+  <text x="571.66699" y="408.10367" dx="7" dy="-3" fill="#000000">Отель Звёздный</text>
+  <text x="221.66701" y="334.19067" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Пансионат Нева</text>
+  <text x="221.66701" y="334.19067" dx="7" dy="-3" fill="#000000">Пансионат Нева</text>
+  <text x="980" y="629.84265" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Пансионат Светлана</text>
+  <text x="980" y="629.84265" dx="7" dy="-3" fill="#000000">Пансионат Светлана</text>
+  <text x="455" y="482.01666" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Парк Ривьера</text>
+  <text x="455" y="482.01666" dx="7" dy="-3" fill="#000000">Парк Ривьера</text>
+  <text x="980" y="518.97363" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Пионерская улица, 111</text>
+  <text x="980" y="518.97363" dx="7" dy="-3" fill="#000000">Пионерская улица, 111</text>
+  <text x="921.66699" y="555.92969" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Садовая</text>
+  <text x="921.66699" y="555.92969" dx="7" dy="-3" fill="#000000">Садовая</text>
+  <text x="1388.33" y="888.53864" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий Заря</text>
+  <text x="1388.33" y="888.53864" dx="7" dy="-3" fill="#000000">Санаторий Заря</text>
+  <text x="1155" y="740.71265" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий Металлург</text>
+  <text x="1155" y="740.71265" dx="7" dy="-3" fill="#000000">Санаторий Металлург</text>
+  <text x="1330" y="851.58167" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий Приморье</text>
+  <text x="1330" y="851.58167" dx="7" dy="-3" fill="#000000">Санаторий Приморье</text>
+  <text x="280" y="371.14767" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий Радуга</text>
+  <text x="280" y="371.14767" dx="7" dy="-3" fill="#000000">Санаторий Радуга</text>
+  <text x="338.33301" y="408.10367" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий Родина</text>
+  <text x="338.33301" y="408.10367" dx="7" dy="-3" fill="#000000">Санаторий Родина</text>
+  <text x="105" y="260.27765" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий Салют</text>
+  <text x="105" y="260.27765" dx="7" dy="-3" fill="#000000">Санаторий Салют</text>
+  <text x="1271.67" y="814.62567" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторий им. Ворошилова</text>
+  <text x="1271.67" y="814.62567" dx="7" dy="-3" fill="#000000">Санаторий им. Ворошилова</text>
+  <text x="163.33299" y="297.23468" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Санаторная улица</text>
+  <text x="163.33299" y="297.23468" dx="7" dy="-3" fill="#000000">Санаторная улица</text>
+  <text x="688.33301" y="482.01666" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Сбербанк</text>
+  <text x="688.33301" y="482.01666" dx="7" dy="-3" fill="#000000">Сбербанк</text>
+  <text x="396.66699" y="445.06067" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Спортивная</text>
+  <text x="396.66699" y="445.06067" dx="7" dy="-3" fill="#000000">Спортивная</text>
+  <text x="1096.6699" y="703.75568" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Стадион</text>
+  <text x="1096.6699" y="703.75568" dx="7" dy="-3" fill="#000000">Стадион</text>
+  <text x="863.33301" y="592.88666" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Театральная</text>
+  <text x="863.33301" y="592.88666" dx="7" dy="-3" fill="#000000">Театральная</text>
+  <text x="1213.33" y="777.66864" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Улица Бытха</text>
+  <text x="1213.33" y="777.66864" dx="7" dy="-3" fill="#000000">Улица Бытха</text>
+  <text x="1096.6699" y="555.92969" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Улица В. Лысая Гора</text>
+  <text x="1096.6699" y="555.92969" dx="7" dy="-3" fill="#000000">Улица В. Лысая Гора</text>
+  <text x="1038.333" y="482.01666" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Улица Лизы Чайкиной</text>
+  <text x="1038.333" y="482.01666" dx="7" dy="-3" fill="#000000">Улица Лизы Чайкиной</text>
+  <text x="1038.333" y="592.88666" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Улица Лысая Гора</text>
+  <text x="1038.333" y="592.88666" dx="7" dy="-3" fill="#000000">Улица Лысая Гора</text>
+  <text x="455" y="334.19067" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Хлебозавод</text>
+  <text x="455" y="334.19067" dx="7" dy="-3" fill="#000000">Хлебозавод</text>
+  <text x="105" y="112.45166" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Целинная улица</text>
+  <text x="105" y="112.45166" dx="7" dy="-3" fill="#000000">Целинная улица</text>
+  <text x="221.66701" y="186.36465" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Целинная улица, 5</text>
+  <text x="221.66701" y="186.36465" dx="7" dy="-3" fill="#000000">Целинная улица, 5</text>
+  <text x="163.33299" y="149.40816" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Целинная улица, 57</text>
+  <text x="163.33299" y="149.40816" dx="7" dy="-3" fill="#000000">Целинная улица, 57</text>
+  <text x="1038.333" y="666.79968" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Цирк</text>
+  <text x="1038.333" y="666.79968" dx="7" dy="-3" fill="#000000">Цирк</text>
+ </g>
+ <polyline transform="translate(55 62.452)" points="983.33 604.35 1041.7 567.39" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <circle cx="1096.7" cy="629.84" r="5"/>
+ <g font-family="Verdana" font-size="13px">
+  <text x="1038.333" y="666.79968" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Цирк</text>
+  <text x="1038.333" y="666.79968" dx="7" dy="-3" fill="#000000">Цирк</text>
+  <text x="1096.6699" y="629.84265" dx="7" dy="-3" fill="rgba(255,255,255,0.85)" stroke="rgba(255,255,255,0.85)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">Парк Дендрарий</text>
+  <text x="1096.6699" y="629.84265" dx="7" dy="-3" fill="#000000">Парк Дендрарий</text>
+ </g>
+</svg>
